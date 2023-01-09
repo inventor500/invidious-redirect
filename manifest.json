@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "Invidius_Redirect",
+	"version": "0.1",
+	"description": "Redirect youtube links to a random clearnet Invidious instance that does not use Cloudflare and has no reported source code changes.",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://youtube.com/",
+        "https://www.youtube.com/"
+    ],
+	"background": {
+		"scripts": ["background-script.js"]
+	}
+}
