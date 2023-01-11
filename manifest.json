@@ -1,20 +1,22 @@
 {
 	"manifest_version": 2,
-	"name": "Invidious_Redirect",
-	"version": "0.1",
-	"description": "Redirect youtube links to a random clearnet Invidious instance that does not use Cloudflare and has no reported source code changes.",
+	"name": "Redirect",
+	"version": "0.2",
+	"description": "Redirect youtube and reddit links to a random clearnet Invidious instance that does not use Cloudflare and has no reported source code changes (for youtube) or to teddit (for reddit).",
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
 		"https://youtube.com/",
-		"https://www.youtube.com/"
+		"https://www.youtube.com/",
+		"https://reddit.com/",
+		"https://www.reddit.com/"
 	],
 	"background": {
 		"scripts": ["background-script.js"]
 	},
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "invidious-redirect@isaacganoung.com",
+			"id": "redirect@isaacganoung.com",
 			"strict_min_version": "42.0"
 		}
 	}

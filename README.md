@@ -1,11 +1,13 @@
-# Invidious Redirect
+# Redirect
 
-This is a simple Firefox extension to automatically redirect connections to YouTube to a randomly chosen Invidious instance.
+This is a simple Firefox extension to automatically redirect connections to YouTube to a randomly chosen Invidious instance. It also redirects connections to reddit to a random Teddit instance.
 
 Only clearnet Invidious instances listed at [invidious.io](https://docs.invidious.io/instances/) that do not have source code
 changes and do not use Cloudflare are redirected to.
 
-Current instances are:
+## Invidious Instances
+
+Current Invidious instances are:
 * [invidious.snopyta.org](https://invidious.snopyta.org/)
 * [vid.puffyan.us](https://vid.puffyan.us/)
 * [inv.riverside.rocks](https://inv.riverside.rocks/)
@@ -30,3 +32,33 @@ Current instances are:
 * [iv.ggtyler.dev](https://iv.ggtyler.dev/)
 * [invidious.epicsite.xyz](https://invidious.epicsite.xyz/)
 
+## Teddit Instances
+
+Current Teddit instances are:
+* [teddit.ggc-project.de](https://teddit.ggc-project.de)
+* [teddit.zaggy.nl](https://teddit.zaggy.nl)
+* [teddit.namazso.eu](https://teddit.namazso.eu)
+* [teddit.tinfoil-hat.net](https://teddit.tinfoil-hat.net)
+* [teddit.domain.class](https://teddit.domain.class)
+* [snoo.ioens.is](https://snoo.ioens.is)
+* [teddit.httpjames.space](https://teddit.httpjames.space)
+* [incogsnoo.com](https://incogsnoo.com)
+* [teddit.pussthecat.org](https://teddit.pussthecat.org)
+* [reddit.lol](https://reddit.lol)
+* [teddit.sethfortheprivacy.com](https://teddit.sethfortheprivacy.com)
+* [reddit.totaldarkness.net](https://reddit.totaldarkness.net)
+* [teddit.adminforge.de](https://teddit.adminforge.de)
+* [teddit.bus-hit.me](https://teddit.bus-hit.me)
+* [teddit.froth.zone](https://teddit.froth.zone)
+* [rdt.trom.tf](https://rdt.tron.tf)
+* [teddit.ecrypted-data.xyz](https://teddit.encrypted-data.xyz)
+* [i.opnxng.com](https://i.opnxng.com)
+* [teddit.tokhmi.xyz](https://teddit.tokhmi.xyz)
+* [teddit.garudalinux.org](https://teddit.garudalinux.org)
+* [tedd.it](https://tedd.it)
+* [teddit.privacytools.io](https://teddit.privacytools.io)
+* [td.vern.cc](https://td.vern.cc)
+* [teddit.rawbit.ninja](https://teddit.rawbit.ninja)
+* [teddit.artemislena.eu](https://teddit.artemislena.eu)
+* [teddit.manasiwibi.com](https://teddit.manasiwibi.com)
+* [teddit.hostux.net](https://teddit.hostux.net)
