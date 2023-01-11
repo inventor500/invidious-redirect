@@ -4,23 +4,21 @@ Array.prototype.random = function() {
     return this[Math.floor((Math.random() * this.length))];
 }
 
-const youtube_regex = /http(?:s?):\/\/(?:w{3}\.)?youtube\.com(\/.*)/;
-const inv_instances = ["invidious.snopyta.org", "vid.puffyan.us",
-                   "inv.riverside.rocks", "yt.artemislena.eu",
-                   "invidious.flokinet.to", "invidious.esmailelbob.xyz",
-                   "inv.bp.projectsegfau.lt", "y.com.sb",
-                   "invidious.tiekoetter.com", "invidious.slipfox.xyz",
-                   "invidio.xamh.de", "invidious.dhusch.de",
-                   "inv.odyssey346.dev", "invidious.baczek.me",
-                   "invidious.weblibre.org", "invidious.privacydev.net",
-                   "yt.funami.tech", "vid.priv.au",
-                   "invidious.lidarshield.cloud", "invidious.silur.me",
-                   "iv.melmac.space", "iv.ggtyler.dev",
-                       "invidious.epicsite.xyz"];
+const invInstances = ["invidious.snopyta.org", "vid.puffyan.us",
+					   "inv.riverside.rocks", "yt.artemislena.eu",
+					   "invidious.flokinet.to", "invidious.esmailelbob.xyz",
+					   "inv.bp.projectsegfau.lt", "y.com.sb",
+					   "invidious.tiekoetter.com", "invidious.slipfox.xyz",
+					   "invidio.xamh.de", "invidious.dhusch.de",
+					   "inv.odyssey346.dev", "invidious.baczek.me",
+					   "invidious.weblibre.org", "invidious.privacydev.net",
+					   "yt.funami.tech", "vid.priv.au",
+					   "invidious.lidarshield.cloud", "invidious.silur.me",
+					   "iv.melmac.space", "iv.ggtyler.dev",
+                      "invidious.epicsite.xyz"];
 
 
-const reddit_regex = /http(?:s?):\/\/(?:w{3}\.)?reddit\.com(\/.*)/;
-const ted_instances = ["teddit.ggc-project.de", "teddit.zaggy.nl",
+const tedInstances = ["teddit.ggc-project.de", "teddit.zaggy.nl",
                        "teddit.namazso.eu", "teddit.tinfoil-hat.net",
                        "teddit.domain.class", "snoo.ioens.is",
                        "teddit.httpjames.space", "incogsnoo.com",
@@ -35,26 +33,30 @@ const ted_instances = ["teddit.ggc-project.de", "teddit.zaggy.nl",
                        "teddit.artemislena.eu", "teddit.manasiwibi.com",
                        "teddit.hostux.net"];
 
-function redirect_youtube(requestDetails) {
-    let targetUrl = "https://" + inv_instances.random() + requestDetails.url.match(youtube_regex)[1];
+function getPath(url) {
+	return url.substr(url.indexOf('/',8));
+}
+
+function redirectYoutube(requestDetails) {
+    let targetUrl = "https://" + invInstances.random() + getPath(requestDetails.url);
     console.log(`Redirecting ${requestDetails.url} to ${targetUrl}`);
     return { redirectUrl: targetUrl };
 }
 
-function redirect_reddit(requestDetails) {
-    let targetUrl = "https://" + ted_instances.random() + requestDetails.url.match(reddit_regex)[1];
+function redirectReddit(requestDetails) {
+    let targetUrl = "https://" + tedInstances.random() + getPath(requestDetails.url);
     console.log(`Redirecting ${requestDetails.url} to ${targetUrl}`);
     return {redirectUrl: targetUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
-    redirect_youtube,
-    {urls:["https://youtube.com/*","https://www.youtube.com/*"]},
+    redirectYoutube,
+    {urls:["https://youtube.com/*","https://www.youtube.com/*", "https://youtu.be/*"]},
     ["blocking"]
 );
 
 browser.webRequest.onBeforeRequest.addListener(
-    redirect_reddit,
+    redirectReddit,
     {urls:["https://reddit.com/*", "https://www.reddit.com/*"]},
     ["blocking"]
 );
