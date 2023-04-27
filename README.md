@@ -18,7 +18,6 @@ Current Invidious instances are:
 * [y.com.sb](https://y.com.sb/)
 * [invidious.tiekoetter.com](https://invidious.tiekoetter.com/)
 * [invidious.slipfox.xyz](https://invidious.slipfox.xyz/)
-* [watch.thekitty.zone](https://watch.thekitty.zone/)
 * [invidious.dhusch.de](https://invidious.dhusch.de/)
 * [inv.odyssey346.dev](https://inv.odyssey346.dev/)
 * [invidious.baczek.me](https://invidious.baczek.me/)
