@@ -2,7 +2,7 @@
 
 Array.prototype.random = function() {
     return this[Math.floor((Math.random() * this.length))];
-}
+};
 
 const invInstances = ["invidious.snopyta.org", "vid.puffyan.us",
 					   "inv.riverside.rocks", "yt.artemislena.eu",
@@ -14,8 +14,7 @@ const invInstances = ["invidious.snopyta.org", "vid.puffyan.us",
 					   "invidious.weblibre.org", "invidious.privacydev.net",
 					   "yt.funami.tech", "vid.priv.au",
 					   "invidious.lidarshield.cloud", "invidious.silur.me",
-					   "iv.melmac.space", "iv.ggtyler.dev",
-                      "invidious.epicsite.xyz"];
+					   "iv.melmac.space", "iv.ggtyler.dev"];
 
 
 const tedInstances = ["teddit.ggc-project.de", "teddit.zaggy.nl",
@@ -46,7 +45,7 @@ function redirectYoutube(requestDetails) {
 function redirectReddit(requestDetails) {
     let targetUrl = "https://" + tedInstances.random() + getPath(requestDetails.url);
     console.log(`Redirecting ${requestDetails.url} to ${targetUrl}`);
-    return {redirectUrl: targetUrl };
+    return { redirectUrl: targetUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
