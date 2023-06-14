@@ -5,15 +5,16 @@ Array.prototype.random = function() {
 };
 
 const invInstances = ["invidious.snopyta.org", "vid.puffyan.us",
-					   "inv.riverside.rocks", "yt.artemislena.eu",
-					   "invidious.flokinet.to", "invidious.esmailelbob.xyz",
-					   "inv.bp.projectsegfau.lt", "y.com.sb",
-					   "invidious.tiekoetter.com", "invidious.slipfox.xyz",
-					   "invidious.dhusch.de", "invidious.privacydev.net",
-					   "inv.odyssey346.dev", "invidious.baczek.me",
-					   "yt.funami.tech", "vid.priv.au",
-					   "invidious.lidarshield.cloud", "invidious.silur.me",
-					   "iv.melmac.space", "iv.ggtyler.dev"];
+					  "inv.riverside.rocks", "yt.artemislena.eu",
+					  "invidious.flokinet.to", "invidious.esmailelbob.xyz",
+					  "inv.bp.projectsegfau.lt", "y.com.sb",
+					  "invidious.tiekoetter.com", "invidious.slipfox.xyz",
+					  "invidious.baczek.me", "invidious.privacydev.net",
+					  "yt.funami.tech", "vid.priv.au",
+					  "iv.melmac.space", "iv.ggtyler.dev",
+					  "invidious.0011.lt", "inv.zzls.xyz",
+					  "yt.floss.media", "inv.tux.pizza",
+					  "not-ytb.blocus.ch", "invodious.protokolla.fi"];
 
 
 const tedInstances = ["teddit.ggc-project.de", "teddit.zaggy.nl",
